@@ -1,0 +1,92 @@
+{
+  "metadata": {
+    "version": "Agent_V2_Optimized",
+    "total": 50,
+    "timestamp": "2026-04-21 17:00:11"
+  },
+  "metrics": {
+    "avg_score": 0.0,
+    "hit_rate": 0.62,
+    "mrr": 0.4033,
+    "faithfulness": 0.0294,
+    "relevancy": 0.3158,
+    "agreement_rate": 0.0,
+    "avg_latency_ms": 505.29999999999995,
+    "pass_rate": 0.0,
+    "total_cost_usd": 0
+  },
+  "regression": {
+    "gate_decision": "BLOCK",
+    "gate_reasons": [
+      "Latency: 505ms < 3000ms OK",
+      "Hit Rate 0.620 < 0.8 (BLOCK)",
+      "MRR 0.403 < 0.6 (BLOCK)",
+      "Score Delta +0.000 < 0.05 (BLOCK)"
+    ],
+    "deltas": {
+      "avg_score": {
+        "v1": 0.0,
+        "v2": 0.0,
+        "delta": 0.0,
+        "pct": 0.0,
+        "direction": "unchanged"
+      },
+      "hit_rate": {
+        "v1": 0.62,
+        "v2": 0.62,
+        "delta": 0.0,
+        "pct": 0.0,
+        "direction": "unchanged"
+      },
+      "mrr": {
+        "v1": 0.40333333333333327,
+        "v2": 0.40333333333333327,
+        "delta": 0.0,
+        "pct": 0.0,
+        "direction": "unchanged"
+      },
+      "agreement_rate": {
+        "v1": 0.0,
+        "v2": 0.0,
+        "delta": 0.0,
+        "pct": 0.0,
+        "direction": "unchanged"
+      },
+      "avg_latency_ms": {
+        "v1": 506.7659999999996,
+        "v2": 505.34600000000006,
+        "delta": -1.42,
+        "pct": -0.28,
+        "direction": "improved"
+      },
+      "faithfulness": {
+        "v1": 0.029409999999999995,
+        "v2": 0.029409999999999995,
+        "delta": 0.0,
+        "pct": 0.0,
+        "direction": "unchanged"
+      },
+      "relevancy": {
+        "v1": 0.31579999999999975,
+        "v2": 0.31579999999999975,
+        "delta": 0.0,
+        "pct": 0.0,
+        "direction": "unchanged"
+      },
+      "pass_rate": {
+        "v1": 0.0,
+        "v2": 0.0,
+        "delta": 0.0,
+        "pct": 0.0,
+        "direction": "unchanged"
+      }
+    },
+    "cost_comparison": {
+      "v1_cost_usd": 0.5475,
+      "v2_cost_usd": 0.5475,
+      "cost_per_case_v2": 0.01095,
+      "total_tokens": 23000,
+      "cost_ratio": 1.0
+    }
+  }
+}

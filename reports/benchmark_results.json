@@ -1,0 +1,2259 @@
+[
+  {
+    "test_case": "(Auto) Câu hỏi về access_control_sop #1",
+    "expected_answer": "QUY TRÌNH KIỂM SOÁT TRUY CẬP HỆ THỐNG (ACCESS CONTROL SOP)\nSource: it/access-control-sop",
+    "agent_response": "Dựa trên tài liệu hệ thống, tôi xin trả lời câu hỏi '(Auto) Câu hỏi về access_control_sop #1' như sau: [Câu trả lời mẫu].",
+    "expected_retrieval_ids": [
+      "access_control_sop"
+    ],
+    "latency": 0.5011,
+    "status": "fail",
+    "ragas": {
+      "faithfulness": 0.0667,
+      "relevancy": 0.3158,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 0.5,
+        "retrieved_ids": [
+          "it_helpdesk_faq",
+          "access_control_sop",
+          "hr_leave_policy"
+        ],
+        "expected_ids": [
+          "access_control_sop"
+        ],
+        "errors": {
+          "missing_chunks": [],
+          "noise_chunks": [
+            "it_helpdesk_faq",
+            "hr_leave_policy"
+          ],
+          "is_perfect_match": false,
+          "precision": 0.3333333333333333,
+          "recall": 1.0
+        }
+      }
+    },
+    "judge": {
+      "final_score": 0,
+      "agreement_rate": 0,
+      "resolution_method": "",
+      "reasoning": "",
+      "individual_scores": [],
+      "total_cost_usd": 0
+    }
+  },
+  {
+    "test_case": "(Auto) Câu hỏi về hr_leave_policy #2",
+    "expected_answer": "CHÍNH SÁCH NGHỈ PHÉP VÀ PHÚC LỢI NHÂN SỰ\nSource: hr/leave-policy-2026",
+    "agent_response": "Dựa trên tài liệu hệ thống, tôi xin trả lời câu hỏi '(Auto) Câu hỏi về hr_leave_policy #2' như sau: [Câu trả lời mẫu].",
+    "expected_retrieval_ids": [
+      "hr_leave_policy"
+    ],
+    "latency": 0.5012,
+    "status": "fail",
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.3158,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 0.3333333333333333,
+        "retrieved_ids": [
+          "it_helpdesk_faq",
+          "access_control_sop",
+          "hr_leave_policy"
+        ],
+        "expected_ids": [
+          "hr_leave_policy"
+        ],
+        "errors": {
+          "missing_chunks": [],
+          "noise_chunks": [
+            "access_control_sop",
+            "it_helpdesk_faq"
+          ],
+          "is_perfect_match": false,
+          "precision": 0.3333333333333333,
+          "recall": 1.0
+        }
+      }
+    },
+    "judge": {
+      "final_score": 0,
+      "agreement_rate": 0,
+      "resolution_method": "",
+      "reasoning": "",
+      "individual_scores": [],
+      "total_cost_usd": 0
+    }
+  },
+  {
+    "test_case": "(Auto) Câu hỏi về it_helpdesk_faq #3",
+    "expected_answer": "IT HELPDESK FAQ — CÂU HỎI THƯỜNG GẶP\nSource: support/helpdesk-faq",
+    "agent_response": "Dựa trên tài liệu hệ thống, tôi xin trả lời câu hỏi '(Auto) Câu hỏi về it_helpdesk_faq #3' như sau: [Câu trả lời mẫu].",
+    "expected_retrieval_ids": [
+      "it_helpdesk_faq"
+    ],
+    "latency": 0.5011,
+    "status": "fail",
+    "ragas": {
+      "faithfulness": 0.0769,
+      "relevancy": 0.3158,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "retrieved_ids": [
+          "it_helpdesk_faq",
+          "access_control_sop",
+          "hr_leave_policy"
+        ],
+        "expected_ids": [
+          "it_helpdesk_faq"
+        ],
+        "errors": {
+          "missing_chunks": [],
+          "noise_chunks": [
+            "access_control_sop",
+            "hr_leave_policy"
+          ],
+          "is_perfect_match": false,
+          "precision": 0.3333333333333333,
+          "recall": 1.0
+        }
+      }
+    },
+    "judge": {
+      "final_score": 0,
+      "agreement_rate": 0,
+      "resolution_method": "",
+      "reasoning": "",
+      "individual_scores": [],
+      "total_cost_usd": 0
+    }
+  },
+  {
+    "test_case": "(Auto) Câu hỏi về policy_refund_v4 #4",
+    "expected_answer": "CHÍNH SÁCH HOÀN TIỀN - PHIÊN BẢN 4\nSource: policy/refund-v4",
+    "agent_response": "Dựa trên tài liệu hệ thống, tôi xin trả lời câu hỏi '(Auto) Câu hỏi về policy_refund_v4 #4' như sau: [Câu trả lời mẫu].",
+    "expected_retrieval_ids": [
+      "policy_refund_v4"
+    ],
+    "latency": 0.5012,
+    "status": "fail",
+    "ragas": {
+      "faithfulness": 0.0345,
+      "relevancy": 0.3158,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "retrieved_ids": [
+          "it_helpdesk_faq",
+          "access_control_sop",
+          "hr_leave_policy"
+        ],
+        "expected_ids": [
+          "policy_refund_v4"
+        ],
+        "errors": {
+          "missing_chunks": [
+            "policy_refund_v4"
+          ],
+          "noise_chunks": [
+            "access_control_sop",
+            "it_helpdesk_faq",
+            "hr_leave_policy"
+          ],
+          "is_perfect_match": false,
+          "precision": 0.0,
+          "recall": 0.0
+        }
+      }
+    },
+    "judge": {
+      "final_score": 0,
+      "agreement_rate": 0,
+      "resolution_method": "",
+      "reasoning": "",
+      "individual_scores": [],
+      "total_cost_usd": 0
+    }
+  },
+  {
+    "test_case": "(Auto) Câu hỏi về sla_p1_2026 #5",
+    "expected_answer": "SLA TICKET - QUY ĐỊNH XỬ LÝ SỰ CỐ\nSource: support/sla-p1-2026",
+    "agent_response": "Dựa trên tài liệu hệ thống, tôi xin trả lời câu hỏi '(Auto) Câu hỏi về sla_p1_2026 #5' như sau: [Câu trả lời mẫu].",
+    "expected_retrieval_ids": [
+      "sla_p1_2026"
+    ],
+    "latency": 0.5012,
+    "status": "fail",
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.3158,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "retrieved_ids": [
+          "it_helpdesk_faq",
+          "access_control_sop",
+          "hr_leave_policy"
+        ],
+        "expected_ids": [
+          "sla_p1_2026"
+        ],
+        "errors": {
+          "missing_chunks": [
+            "sla_p1_2026"
+          ],
+          "noise_chunks": [
+            "access_control_sop",
+            "it_helpdesk_faq",
+            "hr_leave_policy"
+          ],
+          "is_perfect_match": false,
+          "precision": 0.0,
+          "recall": 0.0
+        }
+      }
+    },
+    "judge": {
+      "final_score": 0,
+      "agreement_rate": 0,
+      "resolution_method": "",
+      "reasoning": "",
+      "individual_scores": [],
+      "total_cost_usd": 0
+    }
+  },
+  {
+    "test_case": "(Auto) Câu hỏi về access_control_sop #6",
+    "expected_answer": "QUY TRÌNH KIỂM SOÁT TRUY CẬP HỆ THỐNG (ACCESS CONTROL SOP)\nSource: it/access-control-sop",
+    "agent_response": "Dựa trên tài liệu hệ thống, tôi xin trả lời câu hỏi '(Auto) Câu hỏi về access_control_sop #6' như sau: [Câu trả lời mẫu].",
+    "expected_retrieval_ids": [
+      "access_control_sop"
+    ],
+    "latency": 0.5008,
+    "status": "fail",
+    "ragas": {
+      "faithfulness": 0.0667,
+      "relevancy": 0.3158,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 0.5,
+        "retrieved_ids": [
+          "it_helpdesk_faq",
+          "access_control_sop",
+          "hr_leave_policy"
+        ],
+        "expected_ids": [
+          "access_control_sop"
+        ],
+        "errors": {
+          "missing_chunks": [],
+          "noise_chunks": [
+            "it_helpdesk_faq",
+            "hr_leave_policy"
+          ],
+          "is_perfect_match": false,
+          "precision": 0.3333333333333333,
+          "recall": 1.0
+        }
+      }
+    },
+    "judge": {
+      "final_score": 0,
+      "agreement_rate": 0,
+      "resolution_method": "",
+      "reasoning": "",
+      "individual_scores": [],
+      "total_cost_usd": 0
+    }
+  },
+  {
+    "test_case": "(Auto) Câu hỏi về hr_leave_policy #7",
+    "expected_answer": "CHÍNH SÁCH NGHỈ PHÉP VÀ PHÚC LỢI NHÂN SỰ\nSource: hr/leave-policy-2026",
+    "agent_response": "Dựa trên tài liệu hệ thống, tôi xin trả lời câu hỏi '(Auto) Câu hỏi về hr_leave_policy #7' như sau: [Câu trả lời mẫu].",
+    "expected_retrieval_ids": [
+      "hr_leave_policy"
+    ],
+    "latency": 0.501,
+    "status": "fail",
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.3158,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 0.3333333333333333,
+        "retrieved_ids": [
+          "it_helpdesk_faq",
+          "access_control_sop",
+          "hr_leave_policy"
+        ],
+        "expected_ids": [
+          "hr_leave_policy"
+        ],
+        "errors": {
+          "missing_chunks": [],
+          "noise_chunks": [
+            "access_control_sop",
+            "it_helpdesk_faq"
+          ],
+          "is_perfect_match": false,
+          "precision": 0.3333333333333333,
+          "recall": 1.0
+        }
+      }
+    },
+    "judge": {
+      "final_score": 0,
+      "agreement_rate": 0,
+      "resolution_method": "",
+      "reasoning": "",
+      "individual_scores": [],
+      "total_cost_usd": 0
+    }
+  },
+  {
+    "test_case": "(Auto) Câu hỏi về it_helpdesk_faq #8",
+    "expected_answer": "IT HELPDESK FAQ — CÂU HỎI THƯỜNG GẶP\nSource: support/helpdesk-faq",
+    "agent_response": "Dựa trên tài liệu hệ thống, tôi xin trả lời câu hỏi '(Auto) Câu hỏi về it_helpdesk_faq #8' như sau: [Câu trả lời mẫu].",
+    "expected_retrieval_ids": [
+      "it_helpdesk_faq"
+    ],
+    "latency": 0.5009,
+    "status": "fail",
+    "ragas": {
+      "faithfulness": 0.0769,
+      "relevancy": 0.3158,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "retrieved_ids": [
+          "it_helpdesk_faq",
+          "access_control_sop",
+          "hr_leave_policy"
+        ],
+        "expected_ids": [
+          "it_helpdesk_faq"
+        ],
+        "errors": {
+          "missing_chunks": [],
+          "noise_chunks": [
+            "access_control_sop",
+            "hr_leave_policy"
+          ],
+          "is_perfect_match": false,
+          "precision": 0.3333333333333333,
+          "recall": 1.0
+        }
+      }
+    },
+    "judge": {
+      "final_score": 0,
+      "agreement_rate": 0,
+      "resolution_method": "",
+      "reasoning": "",
+      "individual_scores": [],
+      "total_cost_usd": 0
+    }
+  },
+  {
+    "test_case": "(Auto) Câu hỏi về policy_refund_v4 #9",
+    "expected_answer": "CHÍNH SÁCH HOÀN TIỀN - PHIÊN BẢN 4\nSource: policy/refund-v4",
+    "agent_response": "Dựa trên tài liệu hệ thống, tôi xin trả lời câu hỏi '(Auto) Câu hỏi về policy_refund_v4 #9' như sau: [Câu trả lời mẫu].",
+    "expected_retrieval_ids": [
+      "policy_refund_v4"
+    ],
+    "latency": 0.501,
+    "status": "fail",
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.3158,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "retrieved_ids": [
+          "it_helpdesk_faq",
+          "access_control_sop",
+          "hr_leave_policy"
+        ],
+        "expected_ids": [
+          "policy_refund_v4"
+        ],
+        "errors": {
+          "missing_chunks": [
+            "policy_refund_v4"
+          ],
+          "noise_chunks": [
+            "access_control_sop",
+            "it_helpdesk_faq",
+            "hr_leave_policy"
+          ],
+          "is_perfect_match": false,
+          "precision": 0.0,
+          "recall": 0.0
+        }
+      }
+    },
+    "judge": {
+      "final_score": 0,
+      "agreement_rate": 0,
+      "resolution_method": "",
+      "reasoning": "",
+      "individual_scores": [],
+      "total_cost_usd": 0
+    }
+  },
+  {
+    "test_case": "(Auto) Câu hỏi về sla_p1_2026 #10",
+    "expected_answer": "SLA TICKET - QUY ĐỊNH XỬ LÝ SỰ CỐ\nSource: support/sla-p1-2026",
+    "agent_response": "Dựa trên tài liệu hệ thống, tôi xin trả lời câu hỏi '(Auto) Câu hỏi về sla_p1_2026 #10' như sau: [Câu trả lời mẫu].",
+    "expected_retrieval_ids": [
+      "sla_p1_2026"
+    ],
+    "latency": 0.5009,
+    "status": "fail",
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.3158,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 0.5,
+        "retrieved_ids": [
+          "it_helpdesk_faq",
+          "sla_p1_2026",
+          "access_control_sop"
+        ],
+        "expected_ids": [
+          "sla_p1_2026"
+        ],
+        "errors": {
+          "missing_chunks": [],
+          "noise_chunks": [
+            "access_control_sop",
+            "it_helpdesk_faq"
+          ],
+          "is_perfect_match": false,
+          "precision": 0.3333333333333333,
+          "recall": 1.0
+        }
+      }
+    },
+    "judge": {
+      "final_score": 0,
+      "agreement_rate": 0,
+      "resolution_method": "",
+      "reasoning": "",
+      "individual_scores": [],
+      "total_cost_usd": 0
+    }
+  },
+  {
+    "test_case": "(Auto) Câu hỏi về access_control_sop #11",
+    "expected_answer": "QUY TRÌNH KIỂM SOÁT TRUY CẬP HỆ THỐNG (ACCESS CONTROL SOP)\nSource: it/access-control-sop",
+    "agent_response": "Dựa trên tài liệu hệ thống, tôi xin trả lời câu hỏi '(Auto) Câu hỏi về access_control_sop #11' như sau: [Câu trả lời mẫu].",
+    "expected_retrieval_ids": [
+      "access_control_sop"
+    ],
+    "latency": 0.5089,
+    "status": "fail",
+    "ragas": {
+      "faithfulness": 0.0667,
+      "relevancy": 0.3158,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 0.5,
+        "retrieved_ids": [
+          "it_helpdesk_faq",
+          "access_control_sop",
+          "hr_leave_policy"
+        ],
+        "expected_ids": [
+          "access_control_sop"
+        ],
+        "errors": {
+          "missing_chunks": [],
+          "noise_chunks": [
+            "it_helpdesk_faq",
+            "hr_leave_policy"
+          ],
+          "is_perfect_match": false,
+          "precision": 0.3333333333333333,
+          "recall": 1.0
+        }
+      }
+    },
+    "judge": {
+      "final_score": 0,
+      "agreement_rate": 0,
+      "resolution_method": "",
+      "reasoning": "",
+      "individual_scores": [],
+      "total_cost_usd": 0
+    }
+  },
+  {
+    "test_case": "(Auto) Câu hỏi về hr_leave_policy #12",
+    "expected_answer": "CHÍNH SÁCH NGHỈ PHÉP VÀ PHÚC LỢI NHÂN SỰ\nSource: hr/leave-policy-2026",
+    "agent_response": "Dựa trên tài liệu hệ thống, tôi xin trả lời câu hỏi '(Auto) Câu hỏi về hr_leave_policy #12' như sau: [Câu trả lời mẫu].",
+    "expected_retrieval_ids": [
+      "hr_leave_policy"
+    ],
+    "latency": 0.5091,
+    "status": "fail",
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.3158,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "retrieved_ids": [
+          "hr_leave_policy",
+          "it_helpdesk_faq",
+          "access_control_sop"
+        ],
+        "expected_ids": [
+          "hr_leave_policy"
+        ],
+        "errors": {
+          "missing_chunks": [],
+          "noise_chunks": [
+            "access_control_sop",
+            "it_helpdesk_faq"
+          ],
+          "is_perfect_match": false,
+          "precision": 0.3333333333333333,
+          "recall": 1.0
+        }
+      }
+    },
+    "judge": {
+      "final_score": 0,
+      "agreement_rate": 0,
+      "resolution_method": "",
+      "reasoning": "",
+      "individual_scores": [],
+      "total_cost_usd": 0
+    }
+  },
+  {
+    "test_case": "(Auto) Câu hỏi về it_helpdesk_faq #13",
+    "expected_answer": "IT HELPDESK FAQ — CÂU HỎI THƯỜNG GẶP\nSource: support/helpdesk-faq",
+    "agent_response": "Dựa trên tài liệu hệ thống, tôi xin trả lời câu hỏi '(Auto) Câu hỏi về it_helpdesk_faq #13' như sau: [Câu trả lời mẫu].",
+    "expected_retrieval_ids": [
+      "it_helpdesk_faq"
+    ],
+    "latency": 0.509,
+    "status": "fail",
+    "ragas": {
+      "faithfulness": 0.0769,
+      "relevancy": 0.3158,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "retrieved_ids": [
+          "it_helpdesk_faq",
+          "access_control_sop",
+          "hr_leave_policy"
+        ],
+        "expected_ids": [
+          "it_helpdesk_faq"
+        ],
+        "errors": {
+          "missing_chunks": [],
+          "noise_chunks": [
+            "access_control_sop",
+            "hr_leave_policy"
+          ],
+          "is_perfect_match": false,
+          "precision": 0.3333333333333333,
+          "recall": 1.0
+        }
+      }
+    },
+    "judge": {
+      "final_score": 0,
+      "agreement_rate": 0,
+      "resolution_method": "",
+      "reasoning": "",
+      "individual_scores": [],
+      "total_cost_usd": 0
+    }
+  },
+  {
+    "test_case": "(Auto) Câu hỏi về policy_refund_v4 #14",
+    "expected_answer": "CHÍNH SÁCH HOÀN TIỀN - PHIÊN BẢN 4\nSource: policy/refund-v4",
+    "agent_response": "Dựa trên tài liệu hệ thống, tôi xin trả lời câu hỏi '(Auto) Câu hỏi về policy_refund_v4 #14' như sau: [Câu trả lời mẫu].",
+    "expected_retrieval_ids": [
+      "policy_refund_v4"
+    ],
+    "latency": 0.5091,
+    "status": "fail",
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.3158,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "retrieved_ids": [
+          "it_helpdesk_faq",
+          "access_control_sop",
+          "hr_leave_policy"
+        ],
+        "expected_ids": [
+          "policy_refund_v4"
+        ],
+        "errors": {
+          "missing_chunks": [
+            "policy_refund_v4"
+          ],
+          "noise_chunks": [
+            "access_control_sop",
+            "it_helpdesk_faq",
+            "hr_leave_policy"
+          ],
+          "is_perfect_match": false,
+          "precision": 0.0,
+          "recall": 0.0
+        }
+      }
+    },
+    "judge": {
+      "final_score": 0,
+      "agreement_rate": 0,
+      "resolution_method": "",
+      "reasoning": "",
+      "individual_scores": [],
+      "total_cost_usd": 0
+    }
+  },
+  {
+    "test_case": "(Auto) Câu hỏi về sla_p1_2026 #15",
+    "expected_answer": "SLA TICKET - QUY ĐỊNH XỬ LÝ SỰ CỐ\nSource: support/sla-p1-2026",
+    "agent_response": "Dựa trên tài liệu hệ thống, tôi xin trả lời câu hỏi '(Auto) Câu hỏi về sla_p1_2026 #15' như sau: [Câu trả lời mẫu].",
+    "expected_retrieval_ids": [
+      "sla_p1_2026"
+    ],
+    "latency": 0.5091,
+    "status": "fail",
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.3158,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "retrieved_ids": [
+          "sla_p1_2026",
+          "it_helpdesk_faq",
+          "access_control_sop"
+        ],
+        "expected_ids": [
+          "sla_p1_2026"
+        ],
+        "errors": {
+          "missing_chunks": [],
+          "noise_chunks": [
+            "access_control_sop",
+            "it_helpdesk_faq"
+          ],
+          "is_perfect_match": false,
+          "precision": 0.3333333333333333,
+          "recall": 1.0
+        }
+      }
+    },
+    "judge": {
+      "final_score": 0,
+      "agreement_rate": 0,
+      "resolution_method": "",
+      "reasoning": "",
+      "individual_scores": [],
+      "total_cost_usd": 0
+    }
+  },
+  {
+    "test_case": "(Auto) Câu hỏi về access_control_sop #16",
+    "expected_answer": "QUY TRÌNH KIỂM SOÁT TRUY CẬP HỆ THỐNG (ACCESS CONTROL SOP)\nSource: it/access-control-sop",
+    "agent_response": "Dựa trên tài liệu hệ thống, tôi xin trả lời câu hỏi '(Auto) Câu hỏi về access_control_sop #16' như sau: [Câu trả lời mẫu].",
+    "expected_retrieval_ids": [
+      "access_control_sop"
+    ],
+    "latency": 0.514,
+    "status": "fail",
+    "ragas": {
+      "faithfulness": 0.0667,
+      "relevancy": 0.3158,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 0.5,
+        "retrieved_ids": [
+          "it_helpdesk_faq",
+          "access_control_sop",
+          "hr_leave_policy"
+        ],
+        "expected_ids": [
+          "access_control_sop"
+        ],
+        "errors": {
+          "missing_chunks": [],
+          "noise_chunks": [
+            "it_helpdesk_faq",
+            "hr_leave_policy"
+          ],
+          "is_perfect_match": false,
+          "precision": 0.3333333333333333,
+          "recall": 1.0
+        }
+      }
+    },
+    "judge": {
+      "final_score": 0,
+      "agreement_rate": 0,
+      "resolution_method": "",
+      "reasoning": "",
+      "individual_scores": [],
+      "total_cost_usd": 0
+    }
+  },
+  {
+    "test_case": "(Auto) Câu hỏi về hr_leave_policy #17",
+    "expected_answer": "CHÍNH SÁCH NGHỈ PHÉP VÀ PHÚC LỢI NHÂN SỰ\nSource: hr/leave-policy-2026",
+    "agent_response": "Dựa trên tài liệu hệ thống, tôi xin trả lời câu hỏi '(Auto) Câu hỏi về hr_leave_policy #17' như sau: [Câu trả lời mẫu].",
+    "expected_retrieval_ids": [
+      "hr_leave_policy"
+    ],
+    "latency": 0.5142,
+    "status": "fail",
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.3158,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "retrieved_ids": [
+          "it_helpdesk_faq",
+          "policy_refund_v4",
+          "access_control_sop"
+        ],
+        "expected_ids": [
+          "hr_leave_policy"
+        ],
+        "errors": {
+          "missing_chunks": [
+            "hr_leave_policy"
+          ],
+          "noise_chunks": [
+            "access_control_sop",
+            "it_helpdesk_faq",
+            "policy_refund_v4"
+          ],
+          "is_perfect_match": false,
+          "precision": 0.0,
+          "recall": 0.0
+        }
+      }
+    },
+    "judge": {
+      "final_score": 0,
+      "agreement_rate": 0,
+      "resolution_method": "",
+      "reasoning": "",
+      "individual_scores": [],
+      "total_cost_usd": 0
+    }
+  },
+  {
+    "test_case": "(Auto) Câu hỏi về it_helpdesk_faq #18",
+    "expected_answer": "IT HELPDESK FAQ — CÂU HỎI THƯỜNG GẶP\nSource: support/helpdesk-faq",
+    "agent_response": "Dựa trên tài liệu hệ thống, tôi xin trả lời câu hỏi '(Auto) Câu hỏi về it_helpdesk_faq #18' như sau: [Câu trả lời mẫu].",
+    "expected_retrieval_ids": [
+      "it_helpdesk_faq"
+    ],
+    "latency": 0.5141,
+    "status": "fail",
+    "ragas": {
+      "faithfulness": 0.0769,
+      "relevancy": 0.3158,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "retrieved_ids": [
+          "it_helpdesk_faq",
+          "access_control_sop",
+          "hr_leave_policy"
+        ],
+        "expected_ids": [
+          "it_helpdesk_faq"
+        ],
+        "errors": {
+          "missing_chunks": [],
+          "noise_chunks": [
+            "access_control_sop",
+            "hr_leave_policy"
+          ],
+          "is_perfect_match": false,
+          "precision": 0.3333333333333333,
+          "recall": 1.0
+        }
+      }
+    },
+    "judge": {
+      "final_score": 0,
+      "agreement_rate": 0,
+      "resolution_method": "",
+      "reasoning": "",
+      "individual_scores": [],
+      "total_cost_usd": 0
+    }
+  },
+  {
+    "test_case": "(Auto) Câu hỏi về policy_refund_v4 #19",
+    "expected_answer": "CHÍNH SÁCH HOÀN TIỀN - PHIÊN BẢN 4\nSource: policy/refund-v4",
+    "agent_response": "Dựa trên tài liệu hệ thống, tôi xin trả lời câu hỏi '(Auto) Câu hỏi về policy_refund_v4 #19' như sau: [Câu trả lời mẫu].",
+    "expected_retrieval_ids": [
+      "policy_refund_v4"
+    ],
+    "latency": 0.5142,
+    "status": "fail",
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.3158,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "retrieved_ids": [
+          "it_helpdesk_faq",
+          "access_control_sop",
+          "hr_leave_policy"
+        ],
+        "expected_ids": [
+          "policy_refund_v4"
+        ],
+        "errors": {
+          "missing_chunks": [
+            "policy_refund_v4"
+          ],
+          "noise_chunks": [
+            "access_control_sop",
+            "it_helpdesk_faq",
+            "hr_leave_policy"
+          ],
+          "is_perfect_match": false,
+          "precision": 0.0,
+          "recall": 0.0
+        }
+      }
+    },
+    "judge": {
+      "final_score": 0,
+      "agreement_rate": 0,
+      "resolution_method": "",
+      "reasoning": "",
+      "individual_scores": [],
+      "total_cost_usd": 0
+    }
+  },
+  {
+    "test_case": "(Auto) Câu hỏi về sla_p1_2026 #20",
+    "expected_answer": "SLA TICKET - QUY ĐỊNH XỬ LÝ SỰ CỐ\nSource: support/sla-p1-2026",
+    "agent_response": "Dựa trên tài liệu hệ thống, tôi xin trả lời câu hỏi '(Auto) Câu hỏi về sla_p1_2026 #20' như sau: [Câu trả lời mẫu].",
+    "expected_retrieval_ids": [
+      "sla_p1_2026"
+    ],
+    "latency": 0.5141,
+    "status": "fail",
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.3158,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "retrieved_ids": [
+          "it_helpdesk_faq",
+          "access_control_sop",
+          "hr_leave_policy"
+        ],
+        "expected_ids": [
+          "sla_p1_2026"
+        ],
+        "errors": {
+          "missing_chunks": [
+            "sla_p1_2026"
+          ],
+          "noise_chunks": [
+            "access_control_sop",
+            "it_helpdesk_faq",
+            "hr_leave_policy"
+          ],
+          "is_perfect_match": false,
+          "precision": 0.0,
+          "recall": 0.0
+        }
+      }
+    },
+    "judge": {
+      "final_score": 0,
+      "agreement_rate": 0,
+      "resolution_method": "",
+      "reasoning": "",
+      "individual_scores": [],
+      "total_cost_usd": 0
+    }
+  },
+  {
+    "test_case": "(Auto) Câu hỏi về access_control_sop #21",
+    "expected_answer": "QUY TRÌNH KIỂM SOÁT TRUY CẬP HỆ THỐNG (ACCESS CONTROL SOP)\nSource: it/access-control-sop",
+    "agent_response": "Dựa trên tài liệu hệ thống, tôi xin trả lời câu hỏi '(Auto) Câu hỏi về access_control_sop #21' như sau: [Câu trả lời mẫu].",
+    "expected_retrieval_ids": [
+      "access_control_sop"
+    ],
+    "latency": 0.5006,
+    "status": "fail",
+    "ragas": {
+      "faithfulness": 0.0667,
+      "relevancy": 0.3158,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 0.5,
+        "retrieved_ids": [
+          "it_helpdesk_faq",
+          "access_control_sop",
+          "hr_leave_policy"
+        ],
+        "expected_ids": [
+          "access_control_sop"
+        ],
+        "errors": {
+          "missing_chunks": [],
+          "noise_chunks": [
+            "it_helpdesk_faq",
+            "hr_leave_policy"
+          ],
+          "is_perfect_match": false,
+          "precision": 0.3333333333333333,
+          "recall": 1.0
+        }
+      }
+    },
+    "judge": {
+      "final_score": 0,
+      "agreement_rate": 0,
+      "resolution_method": "",
+      "reasoning": "",
+      "individual_scores": [],
+      "total_cost_usd": 0
+    }
+  },
+  {
+    "test_case": "(Auto) Câu hỏi về hr_leave_policy #22",
+    "expected_answer": "CHÍNH SÁCH NGHỈ PHÉP VÀ PHÚC LỢI NHÂN SỰ\nSource: hr/leave-policy-2026",
+    "agent_response": "Dựa trên tài liệu hệ thống, tôi xin trả lời câu hỏi '(Auto) Câu hỏi về hr_leave_policy #22' như sau: [Câu trả lời mẫu].",
+    "expected_retrieval_ids": [
+      "hr_leave_policy"
+    ],
+    "latency": 0.5009,
+    "status": "fail",
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.3158,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 0.3333333333333333,
+        "retrieved_ids": [
+          "it_helpdesk_faq",
+          "access_control_sop",
+          "hr_leave_policy"
+        ],
+        "expected_ids": [
+          "hr_leave_policy"
+        ],
+        "errors": {
+          "missing_chunks": [],
+          "noise_chunks": [
+            "access_control_sop",
+            "it_helpdesk_faq"
+          ],
+          "is_perfect_match": false,
+          "precision": 0.3333333333333333,
+          "recall": 1.0
+        }
+      }
+    },
+    "judge": {
+      "final_score": 0,
+      "agreement_rate": 0,
+      "resolution_method": "",
+      "reasoning": "",
+      "individual_scores": [],
+      "total_cost_usd": 0
+    }
+  },
+  {
+    "test_case": "(Auto) Câu hỏi về it_helpdesk_faq #23",
+    "expected_answer": "IT HELPDESK FAQ — CÂU HỎI THƯỜNG GẶP\nSource: support/helpdesk-faq",
+    "agent_response": "Dựa trên tài liệu hệ thống, tôi xin trả lời câu hỏi '(Auto) Câu hỏi về it_helpdesk_faq #23' như sau: [Câu trả lời mẫu].",
+    "expected_retrieval_ids": [
+      "it_helpdesk_faq"
+    ],
+    "latency": 0.5007,
+    "status": "fail",
+    "ragas": {
+      "faithfulness": 0.0769,
+      "relevancy": 0.3158,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "retrieved_ids": [
+          "it_helpdesk_faq",
+          "access_control_sop",
+          "hr_leave_policy"
+        ],
+        "expected_ids": [
+          "it_helpdesk_faq"
+        ],
+        "errors": {
+          "missing_chunks": [],
+          "noise_chunks": [
+            "access_control_sop",
+            "hr_leave_policy"
+          ],
+          "is_perfect_match": false,
+          "precision": 0.3333333333333333,
+          "recall": 1.0
+        }
+      }
+    },
+    "judge": {
+      "final_score": 0,
+      "agreement_rate": 0,
+      "resolution_method": "",
+      "reasoning": "",
+      "individual_scores": [],
+      "total_cost_usd": 0
+    }
+  },
+  {
+    "test_case": "(Auto) Câu hỏi về policy_refund_v4 #24",
+    "expected_answer": "CHÍNH SÁCH HOÀN TIỀN - PHIÊN BẢN 4\nSource: policy/refund-v4",
+    "agent_response": "Dựa trên tài liệu hệ thống, tôi xin trả lời câu hỏi '(Auto) Câu hỏi về policy_refund_v4 #24' như sau: [Câu trả lời mẫu].",
+    "expected_retrieval_ids": [
+      "policy_refund_v4"
+    ],
+    "latency": 0.5009,
+    "status": "fail",
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.3158,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "retrieved_ids": [
+          "access_control_sop",
+          "it_helpdesk_faq",
+          "sla_p1_2026"
+        ],
+        "expected_ids": [
+          "policy_refund_v4"
+        ],
+        "errors": {
+          "missing_chunks": [
+            "policy_refund_v4"
+          ],
+          "noise_chunks": [
+            "access_control_sop",
+            "it_helpdesk_faq",
+            "sla_p1_2026"
+          ],
+          "is_perfect_match": false,
+          "precision": 0.0,
+          "recall": 0.0
+        }
+      }
+    },
+    "judge": {
+      "final_score": 0,
+      "agreement_rate": 0,
+      "resolution_method": "",
+      "reasoning": "",
+      "individual_scores": [],
+      "total_cost_usd": 0
+    }
+  },
+  {
+    "test_case": "(Auto) Câu hỏi về sla_p1_2026 #25",
+    "expected_answer": "SLA TICKET - QUY ĐỊNH XỬ LÝ SỰ CỐ\nSource: support/sla-p1-2026",
+    "agent_response": "Dựa trên tài liệu hệ thống, tôi xin trả lời câu hỏi '(Auto) Câu hỏi về sla_p1_2026 #25' như sau: [Câu trả lời mẫu].",
+    "expected_retrieval_ids": [
+      "sla_p1_2026"
+    ],
+    "latency": 0.5008,
+    "status": "fail",
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.3158,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "retrieved_ids": [
+          "it_helpdesk_faq",
+          "access_control_sop",
+          "hr_leave_policy"
+        ],
+        "expected_ids": [
+          "sla_p1_2026"
+        ],
+        "errors": {
+          "missing_chunks": [
+            "sla_p1_2026"
+          ],
+          "noise_chunks": [
+            "access_control_sop",
+            "it_helpdesk_faq",
+            "hr_leave_policy"
+          ],
+          "is_perfect_match": false,
+          "precision": 0.0,
+          "recall": 0.0
+        }
+      }
+    },
+    "judge": {
+      "final_score": 0,
+      "agreement_rate": 0,
+      "resolution_method": "",
+      "reasoning": "",
+      "individual_scores": [],
+      "total_cost_usd": 0
+    }
+  },
+  {
+    "test_case": "(Auto) Câu hỏi về access_control_sop #26",
+    "expected_answer": "QUY TRÌNH KIỂM SOÁT TRUY CẬP HỆ THỐNG (ACCESS CONTROL SOP)\nSource: it/access-control-sop",
+    "agent_response": "Dựa trên tài liệu hệ thống, tôi xin trả lời câu hỏi '(Auto) Câu hỏi về access_control_sop #26' như sau: [Câu trả lời mẫu].",
+    "expected_retrieval_ids": [
+      "access_control_sop"
+    ],
+    "latency": 0.514,
+    "status": "fail",
+    "ragas": {
+      "faithfulness": 0.0667,
+      "relevancy": 0.3158,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 0.5,
+        "retrieved_ids": [
+          "it_helpdesk_faq",
+          "access_control_sop",
+          "hr_leave_policy"
+        ],
+        "expected_ids": [
+          "access_control_sop"
+        ],
+        "errors": {
+          "missing_chunks": [],
+          "noise_chunks": [
+            "it_helpdesk_faq",
+            "hr_leave_policy"
+          ],
+          "is_perfect_match": false,
+          "precision": 0.3333333333333333,
+          "recall": 1.0
+        }
+      }
+    },
+    "judge": {
+      "final_score": 0,
+      "agreement_rate": 0,
+      "resolution_method": "",
+      "reasoning": "",
+      "individual_scores": [],
+      "total_cost_usd": 0
+    }
+  },
+  {
+    "test_case": "(Auto) Câu hỏi về hr_leave_policy #27",
+    "expected_answer": "CHÍNH SÁCH NGHỈ PHÉP VÀ PHÚC LỢI NHÂN SỰ\nSource: hr/leave-policy-2026",
+    "agent_response": "Dựa trên tài liệu hệ thống, tôi xin trả lời câu hỏi '(Auto) Câu hỏi về hr_leave_policy #27' như sau: [Câu trả lời mẫu].",
+    "expected_retrieval_ids": [
+      "hr_leave_policy"
+    ],
+    "latency": 0.5142,
+    "status": "fail",
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.3158,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 0.3333333333333333,
+        "retrieved_ids": [
+          "it_helpdesk_faq",
+          "access_control_sop",
+          "hr_leave_policy"
+        ],
+        "expected_ids": [
+          "hr_leave_policy"
+        ],
+        "errors": {
+          "missing_chunks": [],
+          "noise_chunks": [
+            "access_control_sop",
+            "it_helpdesk_faq"
+          ],
+          "is_perfect_match": false,
+          "precision": 0.3333333333333333,
+          "recall": 1.0
+        }
+      }
+    },
+    "judge": {
+      "final_score": 0,
+      "agreement_rate": 0,
+      "resolution_method": "",
+      "reasoning": "",
+      "individual_scores": [],
+      "total_cost_usd": 0
+    }
+  },
+  {
+    "test_case": "(Auto) Câu hỏi về it_helpdesk_faq #28",
+    "expected_answer": "IT HELPDESK FAQ — CÂU HỎI THƯỜNG GẶP\nSource: support/helpdesk-faq",
+    "agent_response": "Dựa trên tài liệu hệ thống, tôi xin trả lời câu hỏi '(Auto) Câu hỏi về it_helpdesk_faq #28' như sau: [Câu trả lời mẫu].",
+    "expected_retrieval_ids": [
+      "it_helpdesk_faq"
+    ],
+    "latency": 0.5141,
+    "status": "fail",
+    "ragas": {
+      "faithfulness": 0.0769,
+      "relevancy": 0.3158,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "retrieved_ids": [
+          "it_helpdesk_faq",
+          "access_control_sop",
+          "hr_leave_policy"
+        ],
+        "expected_ids": [
+          "it_helpdesk_faq"
+        ],
+        "errors": {
+          "missing_chunks": [],
+          "noise_chunks": [
+            "access_control_sop",
+            "hr_leave_policy"
+          ],
+          "is_perfect_match": false,
+          "precision": 0.3333333333333333,
+          "recall": 1.0
+        }
+      }
+    },
+    "judge": {
+      "final_score": 0,
+      "agreement_rate": 0,
+      "resolution_method": "",
+      "reasoning": "",
+      "individual_scores": [],
+      "total_cost_usd": 0
+    }
+  },
+  {
+    "test_case": "(Auto) Câu hỏi về policy_refund_v4 #29",
+    "expected_answer": "CHÍNH SÁCH HOÀN TIỀN - PHIÊN BẢN 4\nSource: policy/refund-v4",
+    "agent_response": "Dựa trên tài liệu hệ thống, tôi xin trả lời câu hỏi '(Auto) Câu hỏi về policy_refund_v4 #29' như sau: [Câu trả lời mẫu].",
+    "expected_retrieval_ids": [
+      "policy_refund_v4"
+    ],
+    "latency": 0.5142,
+    "status": "fail",
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.3158,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "retrieved_ids": [
+          "it_helpdesk_faq",
+          "access_control_sop",
+          "hr_leave_policy"
+        ],
+        "expected_ids": [
+          "policy_refund_v4"
+        ],
+        "errors": {
+          "missing_chunks": [
+            "policy_refund_v4"
+          ],
+          "noise_chunks": [
+            "access_control_sop",
+            "it_helpdesk_faq",
+            "hr_leave_policy"
+          ],
+          "is_perfect_match": false,
+          "precision": 0.0,
+          "recall": 0.0
+        }
+      }
+    },
+    "judge": {
+      "final_score": 0,
+      "agreement_rate": 0,
+      "resolution_method": "",
+      "reasoning": "",
+      "individual_scores": [],
+      "total_cost_usd": 0
+    }
+  },
+  {
+    "test_case": "(Auto) Câu hỏi về sla_p1_2026 #30",
+    "expected_answer": "SLA TICKET - QUY ĐỊNH XỬ LÝ SỰ CỐ\nSource: support/sla-p1-2026",
+    "agent_response": "Dựa trên tài liệu hệ thống, tôi xin trả lời câu hỏi '(Auto) Câu hỏi về sla_p1_2026 #30' như sau: [Câu trả lời mẫu].",
+    "expected_retrieval_ids": [
+      "sla_p1_2026"
+    ],
+    "latency": 0.5141,
+    "status": "fail",
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.3158,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "retrieved_ids": [
+          "it_helpdesk_faq",
+          "access_control_sop",
+          "hr_leave_policy"
+        ],
+        "expected_ids": [
+          "sla_p1_2026"
+        ],
+        "errors": {
+          "missing_chunks": [
+            "sla_p1_2026"
+          ],
+          "noise_chunks": [
+            "access_control_sop",
+            "it_helpdesk_faq",
+            "hr_leave_policy"
+          ],
+          "is_perfect_match": false,
+          "precision": 0.0,
+          "recall": 0.0
+        }
+      }
+    },
+    "judge": {
+      "final_score": 0,
+      "agreement_rate": 0,
+      "resolution_method": "",
+      "reasoning": "",
+      "individual_scores": [],
+      "total_cost_usd": 0
+    }
+  },
+  {
+    "test_case": "(Auto) Câu hỏi về access_control_sop #31",
+    "expected_answer": "QUY TRÌNH KIỂM SOÁT TRUY CẬP HỆ THỐNG (ACCESS CONTROL SOP)\nSource: it/access-control-sop",
+    "agent_response": "Dựa trên tài liệu hệ thống, tôi xin trả lời câu hỏi '(Auto) Câu hỏi về access_control_sop #31' như sau: [Câu trả lời mẫu].",
+    "expected_retrieval_ids": [
+      "access_control_sop"
+    ],
+    "latency": 0.5072,
+    "status": "fail",
+    "ragas": {
+      "faithfulness": 0.0667,
+      "relevancy": 0.3158,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 0.5,
+        "retrieved_ids": [
+          "it_helpdesk_faq",
+          "access_control_sop",
+          "hr_leave_policy"
+        ],
+        "expected_ids": [
+          "access_control_sop"
+        ],
+        "errors": {
+          "missing_chunks": [],
+          "noise_chunks": [
+            "it_helpdesk_faq",
+            "hr_leave_policy"
+          ],
+          "is_perfect_match": false,
+          "precision": 0.3333333333333333,
+          "recall": 1.0
+        }
+      }
+    },
+    "judge": {
+      "final_score": 0,
+      "agreement_rate": 0,
+      "resolution_method": "",
+      "reasoning": "",
+      "individual_scores": [],
+      "total_cost_usd": 0
+    }
+  },
+  {
+    "test_case": "(Auto) Câu hỏi về hr_leave_policy #32",
+    "expected_answer": "CHÍNH SÁCH NGHỈ PHÉP VÀ PHÚC LỢI NHÂN SỰ\nSource: hr/leave-policy-2026",
+    "agent_response": "Dựa trên tài liệu hệ thống, tôi xin trả lời câu hỏi '(Auto) Câu hỏi về hr_leave_policy #32' như sau: [Câu trả lời mẫu].",
+    "expected_retrieval_ids": [
+      "hr_leave_policy"
+    ],
+    "latency": 0.5075,
+    "status": "fail",
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.3158,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 0.3333333333333333,
+        "retrieved_ids": [
+          "it_helpdesk_faq",
+          "access_control_sop",
+          "hr_leave_policy"
+        ],
+        "expected_ids": [
+          "hr_leave_policy"
+        ],
+        "errors": {
+          "missing_chunks": [],
+          "noise_chunks": [
+            "access_control_sop",
+            "it_helpdesk_faq"
+          ],
+          "is_perfect_match": false,
+          "precision": 0.3333333333333333,
+          "recall": 1.0
+        }
+      }
+    },
+    "judge": {
+      "final_score": 0,
+      "agreement_rate": 0,
+      "resolution_method": "",
+      "reasoning": "",
+      "individual_scores": [],
+      "total_cost_usd": 0
+    }
+  },
+  {
+    "test_case": "(Auto) Câu hỏi về it_helpdesk_faq #33",
+    "expected_answer": "IT HELPDESK FAQ — CÂU HỎI THƯỜNG GẶP\nSource: support/helpdesk-faq",
+    "agent_response": "Dựa trên tài liệu hệ thống, tôi xin trả lời câu hỏi '(Auto) Câu hỏi về it_helpdesk_faq #33' như sau: [Câu trả lời mẫu].",
+    "expected_retrieval_ids": [
+      "it_helpdesk_faq"
+    ],
+    "latency": 0.5074,
+    "status": "fail",
+    "ragas": {
+      "faithfulness": 0.0769,
+      "relevancy": 0.3158,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "retrieved_ids": [
+          "it_helpdesk_faq",
+          "access_control_sop",
+          "hr_leave_policy"
+        ],
+        "expected_ids": [
+          "it_helpdesk_faq"
+        ],
+        "errors": {
+          "missing_chunks": [],
+          "noise_chunks": [
+            "access_control_sop",
+            "hr_leave_policy"
+          ],
+          "is_perfect_match": false,
+          "precision": 0.3333333333333333,
+          "recall": 1.0
+        }
+      }
+    },
+    "judge": {
+      "final_score": 0,
+      "agreement_rate": 0,
+      "resolution_method": "",
+      "reasoning": "",
+      "individual_scores": [],
+      "total_cost_usd": 0
+    }
+  },
+  {
+    "test_case": "(Auto) Câu hỏi về policy_refund_v4 #34",
+    "expected_answer": "CHÍNH SÁCH HOÀN TIỀN - PHIÊN BẢN 4\nSource: policy/refund-v4",
+    "agent_response": "Dựa trên tài liệu hệ thống, tôi xin trả lời câu hỏi '(Auto) Câu hỏi về policy_refund_v4 #34' như sau: [Câu trả lời mẫu].",
+    "expected_retrieval_ids": [
+      "policy_refund_v4"
+    ],
+    "latency": 0.5076,
+    "status": "fail",
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.3158,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "retrieved_ids": [
+          "it_helpdesk_faq",
+          "access_control_sop",
+          "hr_leave_policy"
+        ],
+        "expected_ids": [
+          "policy_refund_v4"
+        ],
+        "errors": {
+          "missing_chunks": [
+            "policy_refund_v4"
+          ],
+          "noise_chunks": [
+            "access_control_sop",
+            "it_helpdesk_faq",
+            "hr_leave_policy"
+          ],
+          "is_perfect_match": false,
+          "precision": 0.0,
+          "recall": 0.0
+        }
+      }
+    },
+    "judge": {
+      "final_score": 0,
+      "agreement_rate": 0,
+      "resolution_method": "",
+      "reasoning": "",
+      "individual_scores": [],
+      "total_cost_usd": 0
+    }
+  },
+  {
+    "test_case": "(Auto) Câu hỏi về sla_p1_2026 #35",
+    "expected_answer": "SLA TICKET - QUY ĐỊNH XỬ LÝ SỰ CỐ\nSource: support/sla-p1-2026",
+    "agent_response": "Dựa trên tài liệu hệ thống, tôi xin trả lời câu hỏi '(Auto) Câu hỏi về sla_p1_2026 #35' như sau: [Câu trả lời mẫu].",
+    "expected_retrieval_ids": [
+      "sla_p1_2026"
+    ],
+    "latency": 0.5074,
+    "status": "fail",
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.3158,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "retrieved_ids": [
+          "it_helpdesk_faq",
+          "access_control_sop",
+          "hr_leave_policy"
+        ],
+        "expected_ids": [
+          "sla_p1_2026"
+        ],
+        "errors": {
+          "missing_chunks": [
+            "sla_p1_2026"
+          ],
+          "noise_chunks": [
+            "access_control_sop",
+            "it_helpdesk_faq",
+            "hr_leave_policy"
+          ],
+          "is_perfect_match": false,
+          "precision": 0.0,
+          "recall": 0.0
+        }
+      }
+    },
+    "judge": {
+      "final_score": 0,
+      "agreement_rate": 0,
+      "resolution_method": "",
+      "reasoning": "",
+      "individual_scores": [],
+      "total_cost_usd": 0
+    }
+  },
+  {
+    "test_case": "(Auto) Câu hỏi về access_control_sop #36",
+    "expected_answer": "QUY TRÌNH KIỂM SOÁT TRUY CẬP HỆ THỐNG (ACCESS CONTROL SOP)\nSource: it/access-control-sop",
+    "agent_response": "Dựa trên tài liệu hệ thống, tôi xin trả lời câu hỏi '(Auto) Câu hỏi về access_control_sop #36' như sau: [Câu trả lời mẫu].",
+    "expected_retrieval_ids": [
+      "access_control_sop"
+    ],
+    "latency": 0.5005,
+    "status": "fail",
+    "ragas": {
+      "faithfulness": 0.0667,
+      "relevancy": 0.3158,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 0.5,
+        "retrieved_ids": [
+          "it_helpdesk_faq",
+          "access_control_sop",
+          "hr_leave_policy"
+        ],
+        "expected_ids": [
+          "access_control_sop"
+        ],
+        "errors": {
+          "missing_chunks": [],
+          "noise_chunks": [
+            "it_helpdesk_faq",
+            "hr_leave_policy"
+          ],
+          "is_perfect_match": false,
+          "precision": 0.3333333333333333,
+          "recall": 1.0
+        }
+      }
+    },
+    "judge": {
+      "final_score": 0,
+      "agreement_rate": 0,
+      "resolution_method": "",
+      "reasoning": "",
+      "individual_scores": [],
+      "total_cost_usd": 0
+    }
+  },
+  {
+    "test_case": "(Auto) Câu hỏi về hr_leave_policy #37",
+    "expected_answer": "CHÍNH SÁCH NGHỈ PHÉP VÀ PHÚC LỢI NHÂN SỰ\nSource: hr/leave-policy-2026",
+    "agent_response": "Dựa trên tài liệu hệ thống, tôi xin trả lời câu hỏi '(Auto) Câu hỏi về hr_leave_policy #37' như sau: [Câu trả lời mẫu].",
+    "expected_retrieval_ids": [
+      "hr_leave_policy"
+    ],
+    "latency": 0.5006,
+    "status": "fail",
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.3158,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 0.3333333333333333,
+        "retrieved_ids": [
+          "it_helpdesk_faq",
+          "access_control_sop",
+          "hr_leave_policy"
+        ],
+        "expected_ids": [
+          "hr_leave_policy"
+        ],
+        "errors": {
+          "missing_chunks": [],
+          "noise_chunks": [
+            "access_control_sop",
+            "it_helpdesk_faq"
+          ],
+          "is_perfect_match": false,
+          "precision": 0.3333333333333333,
+          "recall": 1.0
+        }
+      }
+    },
+    "judge": {
+      "final_score": 0,
+      "agreement_rate": 0,
+      "resolution_method": "",
+      "reasoning": "",
+      "individual_scores": [],
+      "total_cost_usd": 0
+    }
+  },
+  {
+    "test_case": "(Auto) Câu hỏi về it_helpdesk_faq #38",
+    "expected_answer": "IT HELPDESK FAQ — CÂU HỎI THƯỜNG GẶP\nSource: support/helpdesk-faq",
+    "agent_response": "Dựa trên tài liệu hệ thống, tôi xin trả lời câu hỏi '(Auto) Câu hỏi về it_helpdesk_faq #38' như sau: [Câu trả lời mẫu].",
+    "expected_retrieval_ids": [
+      "it_helpdesk_faq"
+    ],
+    "latency": 0.5005,
+    "status": "fail",
+    "ragas": {
+      "faithfulness": 0.0769,
+      "relevancy": 0.3158,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "retrieved_ids": [
+          "it_helpdesk_faq",
+          "access_control_sop",
+          "hr_leave_policy"
+        ],
+        "expected_ids": [
+          "it_helpdesk_faq"
+        ],
+        "errors": {
+          "missing_chunks": [],
+          "noise_chunks": [
+            "access_control_sop",
+            "hr_leave_policy"
+          ],
+          "is_perfect_match": false,
+          "precision": 0.3333333333333333,
+          "recall": 1.0
+        }
+      }
+    },
+    "judge": {
+      "final_score": 0,
+      "agreement_rate": 0,
+      "resolution_method": "",
+      "reasoning": "",
+      "individual_scores": [],
+      "total_cost_usd": 0
+    }
+  },
+  {
+    "test_case": "(Auto) Câu hỏi về policy_refund_v4 #39",
+    "expected_answer": "CHÍNH SÁCH HOÀN TIỀN - PHIÊN BẢN 4\nSource: policy/refund-v4",
+    "agent_response": "Dựa trên tài liệu hệ thống, tôi xin trả lời câu hỏi '(Auto) Câu hỏi về policy_refund_v4 #39' như sau: [Câu trả lời mẫu].",
+    "expected_retrieval_ids": [
+      "policy_refund_v4"
+    ],
+    "latency": 0.5006,
+    "status": "fail",
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.3158,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "retrieved_ids": [
+          "it_helpdesk_faq",
+          "access_control_sop",
+          "hr_leave_policy"
+        ],
+        "expected_ids": [
+          "policy_refund_v4"
+        ],
+        "errors": {
+          "missing_chunks": [
+            "policy_refund_v4"
+          ],
+          "noise_chunks": [
+            "access_control_sop",
+            "it_helpdesk_faq",
+            "hr_leave_policy"
+          ],
+          "is_perfect_match": false,
+          "precision": 0.0,
+          "recall": 0.0
+        }
+      }
+    },
+    "judge": {
+      "final_score": 0,
+      "agreement_rate": 0,
+      "resolution_method": "",
+      "reasoning": "",
+      "individual_scores": [],
+      "total_cost_usd": 0
+    }
+  },
+  {
+    "test_case": "(Auto) Câu hỏi về sla_p1_2026 #40",
+    "expected_answer": "SLA TICKET - QUY ĐỊNH XỬ LÝ SỰ CỐ\nSource: support/sla-p1-2026",
+    "agent_response": "Dựa trên tài liệu hệ thống, tôi xin trả lời câu hỏi '(Auto) Câu hỏi về sla_p1_2026 #40' như sau: [Câu trả lời mẫu].",
+    "expected_retrieval_ids": [
+      "sla_p1_2026"
+    ],
+    "latency": 0.5005,
+    "status": "fail",
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.3158,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "retrieved_ids": [
+          "it_helpdesk_faq",
+          "access_control_sop",
+          "hr_leave_policy"
+        ],
+        "expected_ids": [
+          "sla_p1_2026"
+        ],
+        "errors": {
+          "missing_chunks": [
+            "sla_p1_2026"
+          ],
+          "noise_chunks": [
+            "access_control_sop",
+            "it_helpdesk_faq",
+            "hr_leave_policy"
+          ],
+          "is_perfect_match": false,
+          "precision": 0.0,
+          "recall": 0.0
+        }
+      }
+    },
+    "judge": {
+      "final_score": 0,
+      "agreement_rate": 0,
+      "resolution_method": "",
+      "reasoning": "",
+      "individual_scores": [],
+      "total_cost_usd": 0
+    }
+  },
+  {
+    "test_case": "(Auto) Câu hỏi về access_control_sop #41",
+    "expected_answer": "QUY TRÌNH KIỂM SOÁT TRUY CẬP HỆ THỐNG (ACCESS CONTROL SOP)\nSource: it/access-control-sop",
+    "agent_response": "Dựa trên tài liệu hệ thống, tôi xin trả lời câu hỏi '(Auto) Câu hỏi về access_control_sop #41' như sau: [Câu trả lời mẫu].",
+    "expected_retrieval_ids": [
+      "access_control_sop"
+    ],
+    "latency": 0.5011,
+    "status": "fail",
+    "ragas": {
+      "faithfulness": 0.0667,
+      "relevancy": 0.3158,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 0.5,
+        "retrieved_ids": [
+          "it_helpdesk_faq",
+          "access_control_sop",
+          "hr_leave_policy"
+        ],
+        "expected_ids": [
+          "access_control_sop"
+        ],
+        "errors": {
+          "missing_chunks": [],
+          "noise_chunks": [
+            "it_helpdesk_faq",
+            "hr_leave_policy"
+          ],
+          "is_perfect_match": false,
+          "precision": 0.3333333333333333,
+          "recall": 1.0
+        }
+      }
+    },
+    "judge": {
+      "final_score": 0,
+      "agreement_rate": 0,
+      "resolution_method": "",
+      "reasoning": "",
+      "individual_scores": [],
+      "total_cost_usd": 0
+    }
+  },
+  {
+    "test_case": "(Auto) Câu hỏi về hr_leave_policy #42",
+    "expected_answer": "CHÍNH SÁCH NGHỈ PHÉP VÀ PHÚC LỢI NHÂN SỰ\nSource: hr/leave-policy-2026",
+    "agent_response": "Dựa trên tài liệu hệ thống, tôi xin trả lời câu hỏi '(Auto) Câu hỏi về hr_leave_policy #42' như sau: [Câu trả lời mẫu].",
+    "expected_retrieval_ids": [
+      "hr_leave_policy"
+    ],
+    "latency": 0.5012,
+    "status": "fail",
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.3158,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 0.3333333333333333,
+        "retrieved_ids": [
+          "it_helpdesk_faq",
+          "access_control_sop",
+          "hr_leave_policy"
+        ],
+        "expected_ids": [
+          "hr_leave_policy"
+        ],
+        "errors": {
+          "missing_chunks": [],
+          "noise_chunks": [
+            "access_control_sop",
+            "it_helpdesk_faq"
+          ],
+          "is_perfect_match": false,
+          "precision": 0.3333333333333333,
+          "recall": 1.0
+        }
+      }
+    },
+    "judge": {
+      "final_score": 0,
+      "agreement_rate": 0,
+      "resolution_method": "",
+      "reasoning": "",
+      "individual_scores": [],
+      "total_cost_usd": 0
+    }
+  },
+  {
+    "test_case": "(Auto) Câu hỏi về it_helpdesk_faq #43",
+    "expected_answer": "IT HELPDESK FAQ — CÂU HỎI THƯỜNG GẶP\nSource: support/helpdesk-faq",
+    "agent_response": "Dựa trên tài liệu hệ thống, tôi xin trả lời câu hỏi '(Auto) Câu hỏi về it_helpdesk_faq #43' như sau: [Câu trả lời mẫu].",
+    "expected_retrieval_ids": [
+      "it_helpdesk_faq"
+    ],
+    "latency": 0.5011,
+    "status": "fail",
+    "ragas": {
+      "faithfulness": 0.0769,
+      "relevancy": 0.3158,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "retrieved_ids": [
+          "it_helpdesk_faq",
+          "access_control_sop",
+          "hr_leave_policy"
+        ],
+        "expected_ids": [
+          "it_helpdesk_faq"
+        ],
+        "errors": {
+          "missing_chunks": [],
+          "noise_chunks": [
+            "access_control_sop",
+            "hr_leave_policy"
+          ],
+          "is_perfect_match": false,
+          "precision": 0.3333333333333333,
+          "recall": 1.0
+        }
+      }
+    },
+    "judge": {
+      "final_score": 0,
+      "agreement_rate": 0,
+      "resolution_method": "",
+      "reasoning": "",
+      "individual_scores": [],
+      "total_cost_usd": 0
+    }
+  },
+  {
+    "test_case": "(Auto) Câu hỏi về policy_refund_v4 #44",
+    "expected_answer": "CHÍNH SÁCH HOÀN TIỀN - PHIÊN BẢN 4\nSource: policy/refund-v4",
+    "agent_response": "Dựa trên tài liệu hệ thống, tôi xin trả lời câu hỏi '(Auto) Câu hỏi về policy_refund_v4 #44' như sau: [Câu trả lời mẫu].",
+    "expected_retrieval_ids": [
+      "policy_refund_v4"
+    ],
+    "latency": 0.5012,
+    "status": "fail",
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.3158,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "retrieved_ids": [
+          "it_helpdesk_faq",
+          "access_control_sop",
+          "hr_leave_policy"
+        ],
+        "expected_ids": [
+          "policy_refund_v4"
+        ],
+        "errors": {
+          "missing_chunks": [
+            "policy_refund_v4"
+          ],
+          "noise_chunks": [
+            "access_control_sop",
+            "it_helpdesk_faq",
+            "hr_leave_policy"
+          ],
+          "is_perfect_match": false,
+          "precision": 0.0,
+          "recall": 0.0
+        }
+      }
+    },
+    "judge": {
+      "final_score": 0,
+      "agreement_rate": 0,
+      "resolution_method": "",
+      "reasoning": "",
+      "individual_scores": [],
+      "total_cost_usd": 0
+    }
+  },
+  {
+    "test_case": "(Auto) Câu hỏi về sla_p1_2026 #45",
+    "expected_answer": "SLA TICKET - QUY ĐỊNH XỬ LÝ SỰ CỐ\nSource: support/sla-p1-2026",
+    "agent_response": "Dựa trên tài liệu hệ thống, tôi xin trả lời câu hỏi '(Auto) Câu hỏi về sla_p1_2026 #45' như sau: [Câu trả lời mẫu].",
+    "expected_retrieval_ids": [
+      "sla_p1_2026"
+    ],
+    "latency": 0.5011,
+    "status": "fail",
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.3158,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "retrieved_ids": [
+          "it_helpdesk_faq",
+          "access_control_sop",
+          "hr_leave_policy"
+        ],
+        "expected_ids": [
+          "sla_p1_2026"
+        ],
+        "errors": {
+          "missing_chunks": [
+            "sla_p1_2026"
+          ],
+          "noise_chunks": [
+            "access_control_sop",
+            "it_helpdesk_faq",
+            "hr_leave_policy"
+          ],
+          "is_perfect_match": false,
+          "precision": 0.0,
+          "recall": 0.0
+        }
+      }
+    },
+    "judge": {
+      "final_score": 0,
+      "agreement_rate": 0,
+      "resolution_method": "",
+      "reasoning": "",
+      "individual_scores": [],
+      "total_cost_usd": 0
+    }
+  },
+  {
+    "test_case": "(Auto) Câu hỏi về access_control_sop #46",
+    "expected_answer": "QUY TRÌNH KIỂM SOÁT TRUY CẬP HỆ THỐNG (ACCESS CONTROL SOP)\nSource: it/access-control-sop",
+    "agent_response": "Dựa trên tài liệu hệ thống, tôi xin trả lời câu hỏi '(Auto) Câu hỏi về access_control_sop #46' như sau: [Câu trả lời mẫu].",
+    "expected_retrieval_ids": [
+      "access_control_sop"
+    ],
+    "latency": 0.5041,
+    "status": "fail",
+    "ragas": {
+      "faithfulness": 0.0667,
+      "relevancy": 0.3158,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 0.5,
+        "retrieved_ids": [
+          "it_helpdesk_faq",
+          "access_control_sop",
+          "hr_leave_policy"
+        ],
+        "expected_ids": [
+          "access_control_sop"
+        ],
+        "errors": {
+          "missing_chunks": [],
+          "noise_chunks": [
+            "it_helpdesk_faq",
+            "hr_leave_policy"
+          ],
+          "is_perfect_match": false,
+          "precision": 0.3333333333333333,
+          "recall": 1.0
+        }
+      }
+    },
+    "judge": {
+      "final_score": 0,
+      "agreement_rate": 0,
+      "resolution_method": "",
+      "reasoning": "",
+      "individual_scores": [],
+      "total_cost_usd": 0
+    }
+  },
+  {
+    "test_case": "(Auto) Câu hỏi về hr_leave_policy #47",
+    "expected_answer": "CHÍNH SÁCH NGHỈ PHÉP VÀ PHÚC LỢI NHÂN SỰ\nSource: hr/leave-policy-2026",
+    "agent_response": "Dựa trên tài liệu hệ thống, tôi xin trả lời câu hỏi '(Auto) Câu hỏi về hr_leave_policy #47' như sau: [Câu trả lời mẫu].",
+    "expected_retrieval_ids": [
+      "hr_leave_policy"
+    ],
+    "latency": 0.5043,
+    "status": "fail",
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.3158,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 0.3333333333333333,
+        "retrieved_ids": [
+          "it_helpdesk_faq",
+          "access_control_sop",
+          "hr_leave_policy"
+        ],
+        "expected_ids": [
+          "hr_leave_policy"
+        ],
+        "errors": {
+          "missing_chunks": [],
+          "noise_chunks": [
+            "access_control_sop",
+            "it_helpdesk_faq"
+          ],
+          "is_perfect_match": false,
+          "precision": 0.3333333333333333,
+          "recall": 1.0
+        }
+      }
+    },
+    "judge": {
+      "final_score": 0,
+      "agreement_rate": 0,
+      "resolution_method": "",
+      "reasoning": "",
+      "individual_scores": [],
+      "total_cost_usd": 0
+    }
+  },
+  {
+    "test_case": "(Auto) Câu hỏi về it_helpdesk_faq #48",
+    "expected_answer": "IT HELPDESK FAQ — CÂU HỎI THƯỜNG GẶP\nSource: support/helpdesk-faq",
+    "agent_response": "Dựa trên tài liệu hệ thống, tôi xin trả lời câu hỏi '(Auto) Câu hỏi về it_helpdesk_faq #48' như sau: [Câu trả lời mẫu].",
+    "expected_retrieval_ids": [
+      "it_helpdesk_faq"
+    ],
+    "latency": 0.5042,
+    "status": "fail",
+    "ragas": {
+      "faithfulness": 0.0769,
+      "relevancy": 0.3158,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "retrieved_ids": [
+          "it_helpdesk_faq",
+          "access_control_sop",
+          "hr_leave_policy"
+        ],
+        "expected_ids": [
+          "it_helpdesk_faq"
+        ],
+        "errors": {
+          "missing_chunks": [],
+          "noise_chunks": [
+            "access_control_sop",
+            "hr_leave_policy"
+          ],
+          "is_perfect_match": false,
+          "precision": 0.3333333333333333,
+          "recall": 1.0
+        }
+      }
+    },
+    "judge": {
+      "final_score": 0,
+      "agreement_rate": 0,
+      "resolution_method": "",
+      "reasoning": "",
+      "individual_scores": [],
+      "total_cost_usd": 0
+    }
+  },
+  {
+    "test_case": "(Auto) Câu hỏi về policy_refund_v4 #49",
+    "expected_answer": "CHÍNH SÁCH HOÀN TIỀN - PHIÊN BẢN 4\nSource: policy/refund-v4",
+    "agent_response": "Dựa trên tài liệu hệ thống, tôi xin trả lời câu hỏi '(Auto) Câu hỏi về policy_refund_v4 #49' như sau: [Câu trả lời mẫu].",
+    "expected_retrieval_ids": [
+      "policy_refund_v4"
+    ],
+    "latency": 0.5043,
+    "status": "fail",
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.3158,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "retrieved_ids": [
+          "it_helpdesk_faq",
+          "access_control_sop",
+          "hr_leave_policy"
+        ],
+        "expected_ids": [
+          "policy_refund_v4"
+        ],
+        "errors": {
+          "missing_chunks": [
+            "policy_refund_v4"
+          ],
+          "noise_chunks": [
+            "access_control_sop",
+            "it_helpdesk_faq",
+            "hr_leave_policy"
+          ],
+          "is_perfect_match": false,
+          "precision": 0.0,
+          "recall": 0.0
+        }
+      }
+    },
+    "judge": {
+      "final_score": 0,
+      "agreement_rate": 0,
+      "resolution_method": "",
+      "reasoning": "",
+      "individual_scores": [],
+      "total_cost_usd": 0
+    }
+  },
+  {
+    "test_case": "(Auto) Câu hỏi về sla_p1_2026 #50",
+    "expected_answer": "SLA TICKET - QUY ĐỊNH XỬ LÝ SỰ CỐ\nSource: support/sla-p1-2026",
+    "agent_response": "Dựa trên tài liệu hệ thống, tôi xin trả lời câu hỏi '(Auto) Câu hỏi về sla_p1_2026 #50' như sau: [Câu trả lời mẫu].",
+    "expected_retrieval_ids": [
+      "sla_p1_2026"
+    ],
+    "latency": 0.5042,
+    "status": "fail",
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.3158,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "retrieved_ids": [
+          "it_helpdesk_faq",
+          "access_control_sop",
+          "hr_leave_policy"
+        ],
+        "expected_ids": [
+          "sla_p1_2026"
+        ],
+        "errors": {
+          "missing_chunks": [
+            "sla_p1_2026"
+          ],
+          "noise_chunks": [
+            "access_control_sop",
+            "it_helpdesk_faq",
+            "hr_leave_policy"
+          ],
+          "is_perfect_match": false,
+          "precision": 0.0,
+          "recall": 0.0
+        }
+      }
+    },
+    "judge": {
+      "final_score": 0,
+      "agreement_rate": 0,
+      "resolution_method": "",
+      "reasoning": "",
+      "individual_scores": [],
+      "total_cost_usd": 0
+    }
+  }
+]
