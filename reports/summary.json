@@ -8,6 +8,32 @@
     "avg_score": 2.261,
     "hit_rate": 0.953,
     "mrr": 0.917,
-    "agreement_rate": 0.9
+    "agreement_rate": 0.9,
+    "pass_rate": 0.0
+  },
+  "regression": {
+    "gate_decision": "BLOCK",
+    "gate_reasons": [
+      "Score Delta +0.000 < 0.05 (BLOCK)",
+      "Hit Rate 0.953 > 0.8 OK",
+      "MRR 0.917 > 0.6 OK"
+    ],
+    "deltas": {
+      "avg_score": {
+        "v1": 0.0,
+        "v2": 2.261,
+        "delta": 2.261
+      },
+      "hit_rate": {
+        "v1": 0.62,
+        "v2": 0.953,
+        "delta": 0.333
+      },
+      "mrr": {
+        "v1": 0.403,
+        "v2": 0.917,
+        "delta": 0.514
+      }
+    }
   }
 }
