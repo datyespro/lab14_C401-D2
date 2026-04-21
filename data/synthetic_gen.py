@@ -124,7 +124,7 @@ def normalize_case(item: Dict[str, Any], fallback_docs: List[str]) -> Dict[str, 
     }
 
 
-async def generate_dataset(num_pairs: int = 8) -> List[Dict]:
+async def generate_dataset(num_pairs: int = 50) -> List[Dict]:
     docs = load_documents()
     prompt = build_prompt(docs, num_pairs=num_pairs)
 
