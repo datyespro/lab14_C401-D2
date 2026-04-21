@@ -216,4 +216,3 @@ Tiếp theo (gợi ý):
 
 - Chạy `python data/synthetic_gen.py` để tạo ít nhất 50 cases.
 - Chạy `python main.py` để lấy benchmark hoàn chỉnh.
-- Nếu muốn, yêu cầu tôi mở rộng `data/synthetic_gen.py` để sinh 50+ case tự động.
