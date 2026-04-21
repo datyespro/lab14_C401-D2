@@ -1,46 +1,43 @@
-# 📑 Individual Report: Báo cáo công việc
+# 📑 Individual Report: Báo cáo công việc cá nhân
 
-Họ và tên: Nguyễn Thành Đạt
-Mã số học viên: 2A202600203
-
-
----
-
-## 1. Mục tiêu và Trách nhiệm
-Nhiệm vụ chính của tôi là xây dựng trái tim của hệ thống đánh giá tự động: **Hệ thống Multi-Judge (Giám khảo AI)**. 
-Hệ thống này yêu cầu khởi tạo ít nhất 2 phiên bản LLM song song để tiến hành đánh giá khách quan các câu trả lời do AI Agent sinh ra (từ dữ liệu Golden Dataset), đáp ứng các tiêu chí sản xuất chuyên nghiệp của MLOps và đảm bảo tiết kiệm chi phí.
+Họ và tên: Nguyễn Thành Đạt  
+Mã số học viên: 2A202600203  
+Vai trò trong Lab: (Phụ trách Multi-Judge Engine)  
 
 ---
 
-## 2. Chi tiết Công việc đã thực hiện
-
-### 2.1. Xây dựng Kiến trúc Multi-Judge Engine (`engine/llm_judge.py`)
-- Dựa trên Abstract `BaseJudge`, tôi đã viết hoàn chỉnh class `GPTJudge` kết nối trực tiếp với API của OpenAI.
-- **Quyết định kỹ thuật quan trọng:** Do giới hạn về hạn mức Free-tier của Google (bị lỗi HTTP 429), để đảm bảo tiến độ dự án không bị đình trệ, tôi thiết kế linh hoạt hệ thống chạy song song 2 models khác nhau từ OpenAI: `gpt-4o-mini` (nhanh, nhẹ) và `gpt-4o` (mô hình tiên tiến, khắt khe hơn) để tạo ra hai luồng đánh giá khách quan mô phỏng 2 tính cách Giám khảo riêng biệt.
-
-### 2.2. Xây dựng Prompts & Rubrics Chấm điểm Khắt khe
-Tôi tạo ra bộ lệnh (Prompt Engineering) với hệ thống Rubric phân tầng từ 1 đến 5 điểm để các AI Judge dựa vào đó đánh giá. Trọng tâm của hệ thống điểm xoay quanh 3 tiêu chuẩn cốt lõi:
-- **Accuracy (Độ chính xác):** Đánh giá xem câu trả lời của Agent có sai lệch hoặc bịa đặt (hallucinate) thông tin so với Ground Truth không.
-- **Completeness (Độ đầy đủ):** Chỉ rõ các lỗ hổng thông tin nếu Agent bỏ sót các bước thiết yếu.
-- **Safety/Tone (Độ an toàn):** Cam kết phản hồi không chứa ngôn từ độc hại, rò rỉ thông tin chuẩn SOP của công ty.
-Tất cả kết quả được yêu cầu trả về theo chuẩn định dạng JSON khắt khe để dễ dàng đưa sang các luồng tiếp theo xử lý.
-
-### 2.3. Tích hợp Hệ thống Track Chi phí & Token MLOps (Cost Tracker)
-- Xây dựng riêng class `CostTracker` bên trong Engine. Hệ thống này liên tục lắng nghe và bóc tách dữ liệu Metadata trả về từ mỗi Response của API để cộng dồn số `prompt_tokens` và `completion_tokens`.
-- Quy đổi giá tự động ra USD ($) theo đúng Pricing bảng giá thực của OpenAI để team Lead có bản báo cáo đo lường chi phí (Cost_per_eval) ở pha cuối.
-
-### 2.4. Tối ưu Hiệu Năng bằng Chạy Song Song (Asynchronous Execution)
-Nếu cho từng Giám khảo chấm điểm lần lượt (tuần tự), thời gian chờ sẽ kéo dài gấp đôi gây thắt nút cổ chai cho Benchmark.
-- Tôi đã wrap tất cả logic đánh giá vào hàm `async` và gọi đồng thời (parallel) bằng `asyncio.gather()`. Kiến trúc này giúp hệ thống chờ các HTTP request của Judge1 & Judge2 chạy cùng lúc, tiệt tiêu độ trễ mạng.
-
-### 2.5. Exception Handling & Self-Healing
-Hệ thống chấm điểm AI trong thực tế rất dễ gián đoạn do Timeout, Rate Limit hoặc Parse JSON lỗi.
-- Thiết lập logic tự bảo vệ: Bắt trọn vẹn Exception của từng Request, xử lý log lỗi tinh tế, và gán điểm 0 cùng thông báo giải thích vào ô `reasoning` thay vì làm văng toàn bộ hệ thống đang chạy. Việc đảm bảo hệ thống không bao giờ "crash" giữa chừng (Zero Downtime during Eval) là tiêu chuẩn cao nhất tôi tự đặt ra.
+## I. MỤC TIÊU VÀ ĐÓNG GÓP (Engineering Contribution)
+Nhiệm vụ cốt lõi của tôi trong Lab 14 là thiết kế và khởi tạo trái tim của hệ thống đánh giá tự động "Multi-Judge Benchmark Engine". Tôi đảm nhiệm từ khâu khởi chạy mô hình song song (Người 3) đến chiến lược đồng thuận - xử lý xung đột của hội đồng Giám khảo (Người 4). Cụ thể như sau:
 
 ---
 
-## 3. Kết quả Nhận được
-✅ Multi-Judge khởi tạo và chấm điểm thành công.
-✅ Output logs đều trả về JSON đúng chuẩn.
+## II. ĐÁP ỨNG CÁC TIÊU CHÍ NHÓM (Group Metrics)
 
-Hệ thống hoạt động trơn tru đã được minh chứng qua dòng test hoàn hảo cuối cùng bằng lệnh `python main.py` và `check_lab.py` với **Multi-Judge Metrics: Available**!
+### 1. Multi-Judge Consensus Engine 
+- **Triển khai Multi-Model:** Thay vì dùng single judge, tôi đã xây dựng Class `GPTJudge` linh hoạt và chạy song song 2 phiên bản AI với tính cách khác nhau: `gpt-4o-mini` (evaluate nhanh/rẻ) và `gpt-4o` (evaluate khắt khe/sâu sắc) làm song giám khảo.
+- **Rubrics chi tiết:** Thiết kế hệ thống System Prompt trả về JSON đánh giá chính xác chuẩn xác cho 3 tiêu chí cốt lõi định tính thành định lượng: `Accuracy` (Độ chính xác), `Completeness` (Độ đầy đủ), và `Safety/Tone` (Tính an toàn).
+- **Thuật toán Đồng thuận tự động (Consensus Logic):** Xây dựng bộ phân giải điểm dựa theo logic:
+  - Lệch ≤ 0.5: Đồng thuận tuyệt đối (100% Agreement).
+  - Lệch ≤ 1.0: Đồng thuận tương đối (70% Agreement).
+  - **Conflict Resolution mechanism:** Nếu 2 giám khảo cãi nhau (Lệch > 1.0 điểm), hệ thống đánh Agreement Rate = 0% và kích hoạt chế độ Cảnh báo Cực đoan (**Strict Calibration**). Model sẽ ghi đè điểm bằng `Min(score1, score2)` để quản lý yếu tố rủi ro, và nối hai luồng suy luận vào 1 flag lớn: `[⚠️ CẢNH BÁO XUNG ĐỘT]` lưu trữ thẳng ra log để chuyên gia con người dễ dàng xem xét lại thay vì để trôi lỗi (false positive).
+
+### 2. Tối ưu Code & Đo lường (Performance & Cost )
+- **Asynchronous Pipeline chạy siêu tốc:** Ứng dụng `asyncio.gather` để mở đa luồng gọi requests song song cho tất cả các cases thay vì duyệt `for` tuần tự. Nhờ kiến trúc bất đồng bộ này, việc đánh giá cả dataset 50+ câu hỏi bởi nhiều Model hoàn thành cực nhanh (thỏa mãn tiêu chí < 2 phút theo yêu cầu bài toán).
+- **Quản lý Token MLOps:** Tự động bắt tín hiệu Metadata từ HTTP responses để ghi nhận `prompt_tokens`, `completion_tokens`. Xây dựng module `CostTracker` tự động mapping với Pricing ($) chuẩn của API để sinh bảng biến động chi phí (`cost_per_eval`) tại từng thời điểm.
+
+---
+
+## III. CHIỀU SÂU KỸ THUẬT VÀ PROBLEM SOLVING (Điểm Cá Nhân)
+
+### 1. Problem Solving 
+Trong tuần chạy dự án, tôi đã giải quyết những technical blockers quan trọng cứu dự án khỏi rủi ro quá hạn:
+- **Xử lý sự cố "429 Rate Limit" & Self-Healing:** Khi tài khoản Google Gemini mặc định trong dự án bị cạn tín dụng (Credit Depleted) làm đánh sập các function GenData và Eval. Tôi ngay lập tức thiết kế kiến trúc "Graceful Degradation": refactor pipeline để móc nối fallback sang 2 Model cực mạnh khác của hệ sinh thái OpenAI thay thế, giúp Pipeline tự động phục hồi luồng hoạt động chạy trơn tru đến phút cuối. Thêm logic "Single Judge Fallback" để nếu 1 judge bất ngờ sập, benchmark vẫn ra kết quả thay vì error crash toàn cục.
+- **Kỷ luật Mã nguồn (Git Hygiene):** Kịp thời phát hiện lệnh `git add` nhầm 15.000 file rác của môi trường ảo (lỗi không map `/venv` trong `.gitignore`). Tôi đã Un-stage và cấu hình lại rules git ignore chuẩn để giữ size repository chung của cả nhóm sạch đẹp và nhỏ gọn.
+
+### 2. Technical Depth 
+Đã ứng dụng được các định nghĩa cốt lõi của LLMOps / MLOps:
+- **Cohen's Kappa & Agreement Metrics:** Chỉ số `Agreement Rate` do tôi phân tích đã được áp dụng bản chất mô phỏng độ Kappa để lượng hóa xem mức độ đồng nhất (Inter-rater reliability) giữa 2 con AI Judge.
+- **Cost vs Quality Trade-off:** Tracking cost chỉ ra rằng dùng model To (`gpt-4o`) tiêu thụ ngân quỹ đắt đỏ hơn nhiều lần model Nhỏ (`gpt-4o-mini`). Giải pháp đưa ra là `gpt-4o-mini` đủ tốt cho các task xác minh thông tin tuyến tính, nên về dài hạn chúng ta có thể áp dụng `gpt-4o` ở quy mô hẹp hơn – ví dụ như làm Meta-Judge chỉ chuyên đi can thiệp xử lý Conflict – tiết kiệm chi phí tối đa cho doanh nghiệp.
+- **Position Bias (Phòng vệ Thiên vị vị trí):** Đã phân chia tiêu chí đánh giá thành các dimensions siêu nhỏ thay vì prompt AI tổng hợp điểm 1 lượt, ngăn ngừa việc AI thiên vị luồng thông tin vào sau (recency bias) hoặc vào trước (primacy bias) khi review kết quả của Agent.
+
+🚀 *Kết luận: Đã hoàn thiện xuất sắc module Judge. File check `check_lab.py` trả về dòng trạng thái xanh: `Multi-Judge Metrics: Available` (Hit Rate và Agreement Rate 100% khớp file summary).*
