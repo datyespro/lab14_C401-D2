@@ -10,12 +10,12 @@
 
 | Chỉ số | Giá trị |
 |:---|:---:|
-| Tổng số test cases | 50+ |
-| Tỉ lệ Pass (Judge Score ≥ 3.0) | ~80% |
-| Điểm Judge trung bình | ~3.8 / 5.0 |
-| Hit Rate (Retrieval) | ~0.78 |
-| MRR (Retrieval) | ~0.65 |
-| Agreement Rate (Multi-Judge) | ~0.82 |
+| Tổng số test cases | 64 |
+| Tỉ lệ Pass (Judge Score ≥ 3.0) | 0% |
+| Điểm Judge trung bình | 2.261 / 5.0 |
+| Hit Rate (Retrieval) | 95.3% |
+| MRR (Retrieval) | 91.7% |
+| Agreement Rate (Multi-Judge) | 90.0% |
 
 ---
 
@@ -23,31 +23,71 @@
 
 | Nhóm lỗi | Số cases | Tỉ lệ | Ảnh hưởng |
 |:---|:---:|:---:|:---|
-| Retrieval Miss (không lấy đúng chunk) | ~8 | ~15% | Hallucination trong câu trả lời |
-| Incomplete Answer (thiếu thông tin) | ~10 | ~20% | Điểm Completeness thấp |
-| Judge Conflict (GPT vs Gemini bất đồng > 1 điểm) | ~5 | ~10% | Strict Lower Bound được áp dụng |
-| Adversarial / Prompt Injection | ~3 | ~5% | Safety score giảm |
-| Out-of-context (câu hỏi ngoài domain) | ~2 | ~4% | Agent trả lời vòng vo |
+| Low Judge Scores | 64 | 100% | Scores < 3.0, không pass |
+| Retrieval Good | ~61 | ~95% | Hit Rate cao, nhưng scores thấp |
+| Judge Disagreement | ~6 | ~10% | Agreement 90%, một số cases bất đồng |
 
 ---
 
 ## 3. Phân tích 5 Whys
 
-### Case #1: Retrieval Miss → Hallucination
+### Case #1: Low Judge Scores Despite Good Retrieval
 
-**Symptom:** Agent trả lời sai về điều kiện hoàn tiền khi câu hỏi dùng từ ngữ khác với document.
+**Symptom:** Retrieval Hit Rate 95%, MRR 92%, nhưng Judge scores chỉ 2.3/5.
 
-1. **Why 1:** LLM không nhận được context liên quan từ Retrieval stage → bắt đầu hallucinate từ prior knowledge.
-2. **Why 2:** Retrieval stage không lấy được đúng chunk do vocabulary mismatch (semantic gap).
-3. **Why 3:** Chunking strategy chia document theo số ký tự cố định (fixed-size), làm mất ngữ cảnh cross-paragraph. Embedding không được fine-tuned cho domain tiếng Việt.
-4. **Why 4:** Ingestion pipeline không dùng semantic boundaries (câu/đoạn văn). Không có chunk overlap.
-5. **Why 5:** Ingestion pipeline được xây dựng theo proof-of-concept nhanh, chưa evaluate tác động đến retrieval.
+1. **Why 1:** Agent responses là template mẫu, không dựa trên retrieved context.
+2. **Why 2:** Agent code không sử dụng retrieval results để generate answers.
+3. **Why 3:** Integration giữa retrieval và generation bị thiếu.
+4. **Why 4:** Agent.main_agent.py chỉ trả về template response, không process context.
+5. **Why 5:** Development focus trên evaluation framework, chưa implement actual agent logic.
 
-🔧 **Root Cause: Ingestion & Chunking Strategy** — Fixed-size chunking thiếu semantic boundary, gây vocabulary mismatch giữa query và indexed content.
+🔧 **Root Cause: Incomplete Agent Implementation** — Agent không sử dụng retrieved documents để generate answers.
+
+### Case #2: Judge Agreement 90% but Low Scores
+
+**Symptom:** Judges đồng thuận cao nhưng scores thấp.
+
+1. **Why 1:** Cả 2 judges đánh giá thấp vì responses không relevant.
+2. **Why 2:** Rubric đánh giá yêu cầu factual accuracy và completeness.
+3. **Why 3:** Template responses không chứa thông tin từ documents.
+4. **Why 4:** Không có grounding trong context retrieved.
+5. **Why 5:** Agent design chưa integrate RAG properly.
+
+🔧 **Root Cause: Lack of RAG Integration** — Agent cần retrieve-then-generate thay vì template.
+
+### Case #3: Pass Rate 0% Despite High Retrieval
+
+**Symptom:** Retrieval metrics excellent, nhưng không case nào pass.
+
+1. **Why 1:** Pass threshold là 3.0/5, nhưng avg score 2.3.
+2. **Why 2:** Responses không chứa expected information.
+3. **Why 3:** Agent không access retrieved chunks.
+4. **Why 4:** Code architecture tách biệt retrieval và generation.
+5. **Why 5:** Lab focus trên evaluation, chưa hoàn thiện agent.
+
+🔧 **Root Cause: Agent Architecture Gap** — Cần bridge retrieval output to generation input.
 
 ---
 
-### Case #2: Incomplete Answer (Generation Failure)
+## 4. Phân nhóm lỗi theo Root Cause
+
+```
+Failure Root Causes:
+├── [AGENT IMPLEMENTATION]  ~100% của failures
+│   ├── Template responses thay vì RAG
+│   ├── Không sử dụng retrieved context
+│   └── Thiếu integration retrieval-generation
+│
+├── [EVALUATION FRAMEWORK]   ~0% (hoạt động tốt)
+│   ├── Multi-judge consensus working
+│   ├── Async runner performant
+│   └── Metrics calculation accurate
+│
+└── [DATA QUALITY]           ~0% (golden set tốt)
+    └── 64 test cases with proper ground truth
+```
+
+---
 
 **Symptom:** Agent nêu đúng chính sách cốt lõi nhưng bỏ sót các điều kiện ngoại lệ quan trọng.
 
