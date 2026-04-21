@@ -127,5 +127,3 @@ Ban đầu đặt ngưỡng arbitrary. Sau đó tôi research và đưa ra cơ s
 - Hỗ trợ so sánh nhiều phiên bản liên tiếp (V1 → V2 → V3 → ...)
 
 ---
-
-*Hoàn thành: 2026-04-21*
